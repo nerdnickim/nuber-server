@@ -1,0 +1,25 @@
+{
+	"name": "nuber-server",
+	"version": "1.0.0",
+	"description": "Clone (N)uber-server",
+	"main": "index.js",
+	"repository": "https://github.com/nerdnickim/nuber-server",
+	"author": "Nerdnickk <56470910+Nerdnickk@users.noreply.github.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/node": "^14.0.23",
+		"nodemon": "^2.0.4",
+		"ts-node": "^8.10.2",
+		"tslint-config-prettier": "^1.18.0",
+		"typescript": "^3.9.6"
+	},
+	"scripts": {
+		"dev": "cd src && nodemon --exec ts-node index.ts -e ts,graphql"
+	},
+	"dependencies": {
+		"cors": "^2.8.5",
+		"graphql-yoga": "^1.18.3",
+		"helmet": "^3.23.3",
+		"morgan": "^1.10.0"
+	}
+}

@@ -9,6 +9,7 @@
 	"devDependencies": {
 		"@graphql-tools/load-files": "^6.0.14",
 		"@graphql-tools/merge": "^6.0.14",
+		"@types/bcrypt": "^3.0.0",
 		"@types/node": "^14.0.23",
 		"gql-merge": "^0.0.6",
 		"graphql-to-typescript": "^0.1.2",
@@ -25,6 +26,8 @@
 	"dependencies": {
 		"@graphql-tools/schema": "^6.0.14",
 		"babel-runtime": "^6.26.0",
+		"bcrypt": "^5.0.0",
+		"class-validator": "^0.12.2",
 		"cors": "^2.8.5",
 		"dotenv": "^8.2.0",
 		"graphql-yoga": "^1.18.3",

@@ -14,6 +14,8 @@ import {
 } from "typeorm";
 import Chat from "./Chat";
 import Message from "./Message";
+import Verification from "./Verification";
+import Ride from "./Ride";
 
 const BCRYPT_ROUNDS = 10;
 
@@ -72,6 +74,15 @@ class User extends BaseEntity {
 
 	@OneToMany((type) => Message, (message) => message.user)
 	messages: Message[];
+
+	@OneToMany((type) => Verification, (verification) => verification.user)
+	verifications: Verification[];
+
+	@OneToMany((type) => Ride, (ride) => ride.passenger)
+	ridesAsPassenger: Ride[];
+
+	@OneToMany((type) => Ride, (ride) => ride.driver)
+	ridesAsDriver: Ride[];
 
 	@CreateDateColumn() createdAt: string;
 

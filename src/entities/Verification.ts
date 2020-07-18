@@ -6,10 +6,8 @@ import {
 	CreateDateColumn,
 	UpdateDateColumn,
 	BeforeInsert,
-	ManyToOne,
 } from "typeorm";
-import { verificationTarget } from "src/types/types";
-import User from "./User";
+import { verificationTarget } from "../types/types";
 
 const PHONE = "PHONE";
 const EMAIL = "EMAIL";
@@ -27,9 +25,6 @@ class Verification extends BaseEntity {
 	@Column({ type: "text" })
 	key: string;
 
-	@Column({ type: "boolean", default: false })
-	used: boolean;
-
 	@CreateDateColumn() createdAt: string;
 
 	@UpdateDateColumn() updatedAt: string;
@@ -37,9 +32,9 @@ class Verification extends BaseEntity {
 	@BeforeInsert()
 	createKey(): void {
 		if (this.target === PHONE) {
-			this.key === Math.floor(Math.random() * 100000).toString();
+			this.key = Math.floor(Math.random() * 100000).toString();
 		} else if (this.target === EMAIL) {
-			this.key === Math.random().toString(36).substring(2);
+			this.key = Math.random().toString(36).substring(2);
 		}
 	}
 }

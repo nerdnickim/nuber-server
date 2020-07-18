@@ -11,6 +11,7 @@
 		"@graphql-tools/merge": "^6.0.14",
 		"@types/bcrypt": "^3.0.0",
 		"@types/node": "^14.0.23",
+		"@types/twilio": "^2.11.0",
 		"gql-merge": "^0.0.6",
 		"graphql-to-typescript": "^0.1.2",
 		"nodemon": "^2.0.4",
@@ -36,6 +37,7 @@
 		"merge-graphql-schemas": "^1.7.8",
 		"morgan": "^1.10.0",
 		"pg": "^8.3.0",
+		"twilio": "^3.48.0",
 		"typeorm": "^0.2.25"
 	}
 }

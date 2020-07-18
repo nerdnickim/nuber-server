@@ -8,7 +8,7 @@ Clone (N)uber-server Graphql, NodeJs, TypeScript
 
 - [x] Sign In / Sign Up with Facebook
 - [x] Sign In with Email
-- [ ] Start Phone Number Verification
+- [x] Start Phone Number Verification
 - [ ] Complete Phone Number Verification
 - [ ] Sign Up with Email
 

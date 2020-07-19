@@ -24,7 +24,7 @@ Clone (N)uber-server Graphql, NodeJs, TypeScript
 - [x] Get my Profile
 - [x] Request Email Verification
 - [x] Complete Email Verification
-- [ ] Update my Profile
+- [x] Update my Profile
 - [ ] Toggle Driving Mode
 - [ ] Report Location / Orientation
 - [ ] Add Place

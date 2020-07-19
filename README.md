@@ -28,7 +28,7 @@ Clone (N)uber-server Graphql, NodeJs, TypeScript
 - [x] Toggle Driving Mode
 - [x] Report Location / Orientation
 - [x] Add Place
-- [ ] Edit Place
+- [x] Edit Place
 - [ ] Delete Place
 - [ ] Get My Places
 - [ ] See Nearby Drivers

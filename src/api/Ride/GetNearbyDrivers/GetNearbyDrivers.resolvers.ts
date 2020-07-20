@@ -1,6 +1,6 @@
 import { Resolvers } from "src/types/resolvers";
 import privateResolver from "../../../utils/privateResolver";
-import User from "src/entities/User";
+import User from "../../../entities/User";
 import { GetNearbyDriversResponse } from "../../../types/graph";
 import { Between, getRepository } from "typeorm";
 

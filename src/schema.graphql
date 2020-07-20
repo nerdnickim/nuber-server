@@ -89,6 +89,7 @@ type GetRideResponse {
 
 type Subscription {
   NeabyRideSubscription: Ride
+  RideStatusSubscription: Ride
   DriversSubscription: User
 }
 

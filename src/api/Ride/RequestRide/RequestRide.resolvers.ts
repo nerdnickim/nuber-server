@@ -7,10 +7,15 @@ import User from "../../../entities/User";
 const resolvers: Resolvers = {
 	Mutation: {
 		RequestRide: privateResolver(
-			async (_, args: RequestRideMutationArgs, { req }): Promise<RequestRideResponse> => {
+			async (
+				_,
+				args: RequestRideMutationArgs,
+				{ req, pubSub }
+			): Promise<RequestRideResponse> => {
 				const user: User = req.user;
 				try {
 					const ride = await Ride.create({ ...args, passenger: user }).save();
+					pubSub.publish("rideRequest", { NeabyRideSubscription: ride });
 					return {
 						ok: true,
 						error: null,

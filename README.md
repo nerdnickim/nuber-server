@@ -35,7 +35,8 @@ Clone (N)uber-server Graphql, NodeJs, TypeScript
 - [x] Subscribe to Nearby Drivers
 - [x] Request a Ride
 - [x] Get Nearby Ride Requests
-- [ ] Update Ride Status
+- [x] Update Ride Status
+- [ ] Get ride
 - [ ] Subscribe to Ride Status
 - [ ] Get Chat Room Messages
 - [ ] Subscribe to Chat Room Messages

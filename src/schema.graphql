@@ -24,6 +24,7 @@ type Mutation {
   AddPlace(name: String!, lat: Float!, lng: Float!, address: String!, isFav: Boolean!): AddPlaceResponse!
   DeletePlace(id: Int!): DeletePlaceResponse!
   EditPlace(id: Int!, name: String, isFav: Boolean): EditPlaceResponse!
+  RequestRide(pickUpAddress: String!, pickUpLat: Float!, pickUpLng: Float!, dropOffAddress: String!, dropOffLat: Float!, dropOffLng: Float!, price: Float!, distance: String!, duration: String!): RequestRideResponse!
   CompleteEmailVerification(key: String!): CompleteEmailVerificationResponse!
   CompletePhoneVerification(phoneNumber: String!, key: String!): CompletePhoneVerificationResponse!
   EmailSignIn(email: String!, password: String!): EmailSignInResponse!
@@ -54,8 +55,9 @@ type GetMyPlacesResponse {
 
 type Query {
   GetMyPlaces: GetMyPlacesResponse!
-  GetNearbyDrivers: GetNearbyDriversResponse!
+  GetNearbyRides: GetNearbyRidesResponse!
   GetMyProfile: GetMyProfileResponse!
+  GetNearbyDrivers: GetNearbyDriversResponse!
 }
 
 type Place {
@@ -71,10 +73,16 @@ type Place {
   updatedAt: String
 }
 
-type GetNearbyDriversResponse {
+type GetNearbyRidesResponse {
   ok: Boolean!
   error: String
-  drivers: [User]
+  rides: [Ride]
+}
+
+type RequestRideResponse {
+  ok: Boolean!
+  error: Message
+  ride: Ride
 }
 
 type Ride {
@@ -132,6 +140,12 @@ type GetMyProfileResponse {
   ok: Boolean!
   error: String
   user: User
+}
+
+type GetNearbyDriversResponse {
+  ok: Boolean!
+  error: String
+  drivers: [User]
 }
 
 type PhoneVerificationResponse {

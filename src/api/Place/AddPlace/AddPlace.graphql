@@ -5,7 +5,6 @@ type AddPlaceResponse {
 
 type Mutation {
 	AddPlace(
-		placeId: Int!
 		name: String!
 		lat: Float!
 		lng: Float!

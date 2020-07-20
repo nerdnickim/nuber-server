@@ -1,8 +1,8 @@
 import { Resolvers } from "src/types/resolvers";
-import privateResolver from "src/utils/privateResolver";
-import User from "src/entities/User";
+import privateResolver from "../../../utils/privateResolver";
+import User from "../../../entities/User";
 import { DeletePlaceMutationArgs, DeletePlaceResponse } from "../../../types/graph";
-import Place from "src/entities/Place";
+import Place from "../../../entities/Place";
 
 const resolvers: Resolvers = {
 	Mutation: {
@@ -10,7 +10,7 @@ const resolvers: Resolvers = {
 			async (_, args: DeletePlaceMutationArgs, { req }): Promise<DeletePlaceResponse> => {
 				const user: User = req.user;
 				try {
-					const place = await Place.findOne({ id: args.placeId });
+					const place = await Place.findOne({ id: args.id });
 					if (place) {
 						if (place.userId === user.id) {
 							place.remove();

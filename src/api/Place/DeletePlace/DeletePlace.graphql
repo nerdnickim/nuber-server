@@ -4,5 +4,5 @@ type DeletePlaceResponse {
 }
 
 type Mutation {
-	DeletePlace(placeId: Int!): DeletePlaceResponse!
+	DeletePlace(id: Int!): DeletePlaceResponse!
 }

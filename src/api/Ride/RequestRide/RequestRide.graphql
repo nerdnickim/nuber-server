@@ -1,6 +1,6 @@
 type RequestRideResponse {
 	ok: Boolean!
-	error: Message
+	error: String
 	ride: Ride
 }
 

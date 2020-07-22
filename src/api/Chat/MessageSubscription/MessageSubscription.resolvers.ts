@@ -1,6 +1,6 @@
 import { withFilter } from "graphql-yoga";
-import User from "src/entities/User";
-import Chat from "src/entities/Chat";
+import User from "../../../entities/User";
+import Chat from "../../../entities/Chat";
 
 const resolvers = {
 	Subscription: {

@@ -8,7 +8,7 @@ type Query {
   GetChat(chatId: Int!): GetChatResponse!
   GetMyPlaces: GetMyPlacesResponse!
   GetNearbyRide: GetNearbyRideResponse!
-  GetRide(id: Int!): GetRideResponse!
+  GetRide(rideId: Int!): GetRideResponse!
   GetMyProfile: GetMyProfileResponse!
   GetNearbyDrivers: GetNearbyDriversResponse!
 }

@@ -39,9 +39,9 @@ Clone (N)uber-server Graphql, NodeJs, TypeScript
 - [x] Get ride
 - [x] Subscribe to Ride Status
 - [x] Create a Chat Room
-- [ ] Get Chat Room Messages
+- [x] Get Chat Room Messages
+- [x] Send a Chat Message
 - [ ] Subscribe to Chat Room Messages
-- [ ] Send a Chat Message
 
 ## Code Challenge
 

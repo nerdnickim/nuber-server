@@ -9,7 +9,6 @@ import {
 	UpdateDateColumn,
 	BeforeInsert,
 	BeforeUpdate,
-	ManyToOne,
 	OneToMany,
 } from "typeorm";
 import Chat from "./Chat";

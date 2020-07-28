@@ -1,14 +1,14 @@
-type FacebookConnectResponse {
+type FaceBookConnectResponse {
 	ok: Boolean!
 	error: String
 	token: String
 }
 
 type Mutation {
-	FacebookConnect(
+	FaceBookConnect(
 		firstName: String!
 		lastName: String!
 		email: String
 		fbId: String!
-	): FacebookConnectResponse!
+	): FaceBookConnectResponse!
 }

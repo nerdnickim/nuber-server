@@ -1,17 +1,22 @@
-import { Resolvers } from "src/types/resolvers";
-import { FacebookConnectMutationArgs, FacebookConnectResponse } from "src/types/graph";
-import User from "src/entities/User";
+import { Resolvers } from "../../../types/resolvers";
+import {
+	FaceBookConnectMutationArgs,
+	FaceBookConnectResponse,
+} from "../../../types/graph";
+import User from "../../../entities/User";
 import createJWT from "../../../utils/createJWT";
 
 const resolvers: Resolvers = {
 	Mutation: {
-		FacebookConnect: async (
+		FaceBookConnect: async (
 			_,
-			args: FacebookConnectMutationArgs
-		): Promise<FacebookConnectResponse> => {
+			args: FaceBookConnectMutationArgs
+		): Promise<FaceBookConnectResponse> => {
 			const { fbId } = args;
+
 			try {
 				const existingUser = await User.findOne({ fbId });
+
 				if (existingUser) {
 					const token = createJWT(existingUser.id);
 					return {
@@ -30,7 +35,7 @@ const resolvers: Resolvers = {
 			try {
 				const newUser = await User.create({
 					...args,
-					profilePhoto: ` http://graph.facebook.com/"${fbId}/picture?type=square`,
+					profilePhoto: `http://graph.facebook.com/${fbId}/picture?type=square`,
 				}).save();
 				const token = createJWT(newUser.id);
 

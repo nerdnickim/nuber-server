@@ -37,7 +37,7 @@ type Mutation {
   CompletePhoneVerification(phoneNumber: String!, key: String!): CompletePhoneVerificationResponse!
   EmailSignIn(email: String!, password: String!): EmailSignInResponse!
   EmailSignUp(firstName: String!, lastName: String!, email: String!, password: String!, profilePhoto: String!, age: Int!, phoneNumber: String!): EmailSignUpResponse!
-  FacebookConnect(firstName: String!, lastName: String!, email: String, fbId: String!): FacebookConnectResponse!
+  FaceBookConnect(firstName: String!, lastName: String!, email: String, fbId: String!): FaceBookConnectResponse!
   PhoneVerification(phoneNumber: String!): PhoneVerificationResponse!
   ReportMovement(orientation: Float, lastLat: Float, lastLng: Float): ReportMovementResponse!
   RequestEmailVerification: RequestEmailVerificationResponse!
@@ -178,7 +178,7 @@ type EmailSignUpResponse {
   token: String
 }
 
-type FacebookConnectResponse {
+type FaceBookConnectResponse {
   ok: Boolean!
   error: String
   token: String

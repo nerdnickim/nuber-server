@@ -5,6 +5,7 @@ import logger from "morgan";
 import schema from "./schema";
 import decodeJWT from "./utils/decodeJWT";
 import { NextFunction, Response } from "express";
+import { uploadMiddleware, uploadController } from "./upload";
 
 class App {
 	public app: GraphQLServer;
@@ -30,6 +31,7 @@ class App {
 		this.app.express.use(logger("dev"));
 		this.app.express.use(helmet());
 		this.app.express.use(this.jwt);
+		this.app.express.post("/api/upload", uploadMiddleware, uploadController);
 	};
 
 	private jwt = async (req, res: Response, next: NextFunction): Promise<void> => {

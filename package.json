@@ -29,7 +29,7 @@
 	},
 	"dependencies": {
 		"@graphql-tools/schema": "^6.0.14",
-		"aws-sdk": "^2.722.0",
+		"aws-sdk": "^2.814.0",
 		"babel-runtime": "^6.26.0",
 		"bcrypt": "^5.0.0",
 		"class-validator": "^0.12.2",
